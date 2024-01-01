@@ -1,0 +1,26 @@
+name: Deploy to Firebase Hosting on merge
+"on":
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    working-directory: vue/app/MyWebsite
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install packages and build
+        run: yarn install --frozen-lockfile && yarn build
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_YUKKE_MYWEBSITE }}"
+          channelId: live
+          projectId: "${{ secrets.PROJECTID }}"
+          entryPoint: "./vue/app/MyWebsite"
