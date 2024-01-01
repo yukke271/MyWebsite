@@ -4,15 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "@mdi/js": "^7.4.47",
-    "vue": "^3.3.11"
-  },
   "devDependencies": {
+    "vue": "^3.3.11",
     "@vitejs/plugin-vue": "^4.5.2",
     "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.56.0",
@@ -22,6 +19,7 @@
     "vite": "^5.0.8",
     "vite-plugin-vuetify": "^2.0.1",
     "vue-router": "^4.2.5",
-    "vuetify": "^3.4.9"
+    "vuetify": "^3.4.9",
+    "@mdi/js": "^7.4.47"
   }
 }
