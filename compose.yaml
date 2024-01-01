@@ -13,3 +13,5 @@ services:
       - "./vue/app:/app"
     tty: true
     stdin_open: true
+    env_file:
+      - secret/vueenv.secret
