@@ -9,4 +9,5 @@ services:
         - APPNAME=MyWebsite
     ports:
       - "80:80"
-    
+    env_file:
+      - secret/vueenv.secret
