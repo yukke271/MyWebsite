@@ -1,6 +1,7 @@
 version: "3"
 services:
   vue:
+    container_name: mywebsite_prev
     build:
       context: .
       dockerfile: ./build-prev/vue/Dockerfile

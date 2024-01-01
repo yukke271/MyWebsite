@@ -1,6 +1,7 @@
 version: "3"
 services:
   vue:
+    container_name: mywebsite
     build:
       context: .
       dockerfile: ./build/vue/Dockerfile
@@ -12,4 +13,3 @@ services:
       - "./vue/app:/app"
     tty: true
     stdin_open: true
-    

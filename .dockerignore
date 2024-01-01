@@ -1,0 +1,4 @@
+# Node Modules
+vue/app/MyWebsite/node_modules
+# Vue Build File
+vue/app/MyWebsite/dist
