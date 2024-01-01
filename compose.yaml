@@ -1,0 +1,15 @@
+version: "3"
+services:
+  vue:
+    build:
+      context: .
+      dockerfile: ./build/vue/Dockerfile
+      args:
+        - APPNAME=MyWebsite
+    ports:
+      - "5173:5173"
+    volumes:
+      - "./vue/app:/app"
+    tty: true
+    stdin_open: true
+    
